@@ -30,7 +30,7 @@ jobs:
                 use-ai-prompt use-ai-message use-ai-context use-ai-role use-ai-model use-ai-provider use-ai-capability use-tool-call use-agent use-reasoning use-planning use-rag use-ai-memory use-guardrail use-ai-eval use-ai
         steps:
             - name: Check out repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                   fetch-depth: 0
                   persist-credentials: false
