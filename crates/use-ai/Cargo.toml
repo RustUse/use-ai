@@ -1,0 +1,43 @@
+[package]
+name = "use-ai"
+description = "Composable AI interaction primitive facade for RustUse."
+publish = true
+autoexamples = false
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-ai"
+keywords = ["ai", "metadata", "facade"]
+categories = ["science", "data-structures"]
+
+[dependencies]
+use-ai-prompt.workspace = true
+use-ai-message.workspace = true
+use-ai-context.workspace = true
+use-ai-role.workspace = true
+use-ai-model.workspace = true
+use-ai-provider.workspace = true
+use-ai-capability.workspace = true
+use-tool-call.workspace = true
+use-agent.workspace = true
+use-reasoning.workspace = true
+use-planning.workspace = true
+use-rag.workspace = true
+use-ai-memory.workspace = true
+use-guardrail.workspace = true
+use-ai-eval.workspace = true
+
+[[example]]
+name = "ai_basic_usage"
+path = "examples/basic_usage.rs"
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

@@ -1,0 +1,123 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-ai-prompt"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-message"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-context"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-role"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-model"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-provider"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-capability"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-tool-call"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-agent"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-reasoning"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-planning"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-rag"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-memory"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-guardrail"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai-eval"
+release = true
+version_group = "rustuse-ai"
+
+[[package]]
+name = "use-ai"
+release = true
+version_group = "rustuse-ai"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+    "use-ai-prompt",
+    "use-ai-message",
+    "use-ai-context",
+    "use-ai-role",
+    "use-ai-model",
+    "use-ai-provider",
+    "use-ai-capability",
+    "use-tool-call",
+    "use-agent",
+    "use-reasoning",
+    "use-planning",
+    "use-rag",
+    "use-ai-memory",
+    "use-guardrail",
+    "use-ai-eval",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+    { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+    { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+    { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+    { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+    { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+    { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+    { footer = "^changelog: ?ignore$", skip = true },
+    { message = "^.*", group = "Changed" },
+]

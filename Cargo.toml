@@ -1,0 +1,91 @@
+[workspace]
+members = [
+    "crates/use-ai",
+    "crates/use-ai-prompt",
+    "crates/use-ai-message",
+    "crates/use-ai-context",
+    "crates/use-ai-role",
+    "crates/use-ai-model",
+    "crates/use-ai-provider",
+    "crates/use-ai-capability",
+    "crates/use-tool-call",
+    "crates/use-agent",
+    "crates/use-reasoning",
+    "crates/use-planning",
+    "crates/use-rag",
+    "crates/use-ai-memory",
+    "crates/use-guardrail",
+    "crates/use-ai-eval",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+documentation = "https://rustuse.org"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-ai"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-ai-prompt = { version = "0.0.1", path = "crates/use-ai-prompt" }
+use-ai-message = { version = "0.0.1", path = "crates/use-ai-message" }
+use-ai-context = { version = "0.0.1", path = "crates/use-ai-context" }
+use-ai-role = { version = "0.0.1", path = "crates/use-ai-role" }
+use-ai-model = { version = "0.0.1", path = "crates/use-ai-model" }
+use-ai-provider = { version = "0.0.1", path = "crates/use-ai-provider" }
+use-ai-capability = { version = "0.0.1", path = "crates/use-ai-capability" }
+use-tool-call = { version = "0.0.1", path = "crates/use-tool-call" }
+use-agent = { version = "0.0.1", path = "crates/use-agent" }
+use-reasoning = { version = "0.0.1", path = "crates/use-reasoning" }
+use-planning = { version = "0.0.1", path = "crates/use-planning" }
+use-rag = { version = "0.0.1", path = "crates/use-rag" }
+use-ai-memory = { version = "0.0.1", path = "crates/use-ai-memory" }
+use-guardrail = { version = "0.0.1", path = "crates/use-guardrail" }
+use-ai-eval = { version = "0.0.1", path = "crates/use-ai-eval" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+expect_used = "allow"
+float_cmp = "allow"
+missing_const_for_fn = "allow"
+missing_errors_doc = "allow"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+multiple_crate_versions = "allow"
+return_self_not_must_use = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-ai-prompt",
+    "use-ai-message",
+    "use-ai-context",
+    "use-ai-role",
+    "use-ai-model",
+    "use-ai-provider",
+    "use-ai-capability",
+    "use-tool-call",
+    "use-agent",
+    "use-reasoning",
+    "use-planning",
+    "use-rag",
+    "use-ai-memory",
+    "use-guardrail",
+    "use-ai-eval",
+    "use-ai",
+]
